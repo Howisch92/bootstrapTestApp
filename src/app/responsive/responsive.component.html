@@ -1,0 +1,90 @@
+<div class="main-wrapper" [ngClass]="{'main-R':aNeedForRescale}">
+  <div class="header-wrapper box" [ngClass]="{'header -height-R':aNeedForRescale,'header-height':!aNeedForRescale}">
+    <div class="icon-wrapper"></div>
+    <h1 class="header-title" [ngClass]="{'scaling-header':aNeedForRescale}">{{title}}</h1>
+  </div>
+  <div [ngClass]="{'content-wrapper-R': aNeedForRescale, 'content-wrapper': !aNeedForRescale}">
+    <div class="container-nopadding col-sm-4 box">
+      <div class="fourtyfive">
+        <img class="main-image" src="../../assets/sharedImages/lillevildmose.jpeg" [ngClass]="{'image-center':aNeedForRescale}" />
+      </div>
+      <div class="fiftyfive" [ngClass]="{'padding-14': aNeedForRescale}">
+        <div class="facts-wrapper" >
+          <div class="fakta-header">Fakta</div>
+          <div [ngClass]="aNeedForRescale ? 'fakta-container-R' : 'fakta-container'">
+            <p>Solcellepaneler: 161 stk.</p>
+            <p>Solcelleareal: 260 m
+              <sup>2</sup>
+            </p>
+            <p>Effekt: 39,45 kWp</p>
+            <p>Etableret: 2017</p>
+            <p>Årlig produktion: 30.000 kWh</p>
+          </div>
+        </div>
+        <div class="weather-wrapper" [ngClass]="{'scaling-fontsize': aNeedForRescale}">
+          <app-weather-1-day [nodeId]="3533" [ownerNodeId]="2078"></app-weather-1-day>
+        </div>
+      </div>
+    </div>
+    <div class="container-nopadding col-sm-8">
+      <div class="container col-sm-4 box">
+        <div class="sixty">
+          <div [ngClass]="aNeedForRescale ? 'subheader-R' :'subheader'">Aktuel Produktion</div>
+          <app-speedometer speedometerId="2" [nodeId]="2078" [ownerNodeId]="2078" [measureFilter]="'{power.ac|P}'"></app-speedometer>
+        </div>
+        <div class="fourty" [ngClass]="{'padding-12': aNeedForRescale}">
+          <div id="currentProd-wrapper">
+            <div [ngClass]="aNeedForRescale ? 'subContentHeader-R' :'subContentHeader'"> Produceret i dag</div>
+            <div [ngClass]="aNeedForRescale ? 'large-text-R' :'larger-text'">119,9 kWh</div>
+            <div [ngClass]="aNeedForRescale ? 'subContentHeader-R' :'subContentHeader'"> Totalt svarer det til hustandes årlige forbrug</div>
+            <div [ngClass]="aNeedForRescale ? 'large-text-R' :'larger-text'">2,3</div>
+          </div>
+        </div>
+      </div>
+      <div class="container col-sm-4 box">
+        <div class="sixty">
+          <div [ngClass]="aNeedForRescale ? 'subheader-R' :'subheader'">Aktuel Forbrug</div>
+          <app-speedometer speedometerId="1" [nodeId]="2078" [ownerNodeId]="2078" [measureFilter]="'{power.ac|U}'"></app-speedometer>
+        </div>
+        <div class="fourty" [ngClass]="{'padding-12': aNeedForRescale}">
+          <div id="currentUsage-wrapper">
+            <div [ngClass]="aNeedForRescale ? 'subContentHeader-R' :'subContentHeader'"> Forbrugt i dag</div>
+            <div [ngClass]="aNeedForRescale ? 'large-text-R' :'larger-text'">64,6 kWh</div>
+            <div [ngClass]="aNeedForRescale ? 'subContentHeader-R' :'subContentHeader'"> Totalt svarer det til hustandes årlige forbrug</div>
+            <div [ngClass]="aNeedForRescale ? 'large-text-R' :'larger-text'">0,2</div>
+          </div>
+          <!-- <app-odometer odoId="1" [nodeId]="2078" [ownerNodeId]="2078" [measureFilter]="'{energy.total.ac|P}'"></app-odometer> -->
+        </div>
+      </div>
+      <div class="container-nopadding col-sm-4 box">
+        <div class="twentyfive">
+          <div id="totalProd">
+            <div class="subheader">Totalproduktion</div>
+            <div [ngClass]="aNeedForRescale ? 'large-text-R' :'larger-text'">11.949 kWh</div>
+          </div>
+        </div>
+        <div class="twentyfive">
+          <div id="co2ReducTotal" class="box bottom co2">
+            <h2> CO
+              <sub>2</sub> reduktion totalt</h2>
+            <div [ngClass]="{'large-text-R padding-top-5' : aNeedForRescale , 'larger-text padding-top-10': !aNeedForRescale}">3,4 tons</div>
+          </div>
+        </div>
+        <div class="twentyfive">
+          <div id="totalProd">
+            <div class="subheader">Totalproduktion</div>
+            <div class="large-text" [ngClass]="aNeedForRescale ? 'large-text-R' :'larger-text'">11.949 kWh</div>
+          </div>
+        </div>
+        <div class="twentyfive">
+          <div id="co2ReducTotal" class="box bottom co2">
+            <h2> CO
+              <sub>2</sub> reduktion i dag</h2>
+            <div [ngClass]="{'large-text-R padding-top-5' : aNeedForRescale , 'larger-text padding-top-10': !aNeedForRescale}">41,2 kg</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-wrapper"></div>
+</div>

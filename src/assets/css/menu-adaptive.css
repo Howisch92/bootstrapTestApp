@@ -1,0 +1,330 @@
+.menu
+{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	list-style: none;  
+	background: #111;
+	background: -moz-linear-gradient(#444, #111); 
+    background: -webkit-gradient(linear,left bottom,left top,color-stop(0, #111),color-stop(1, #444));	
+	background: -webkit-linear-gradient(#444, #111);	
+	background: -o-linear-gradient(#444, #111);
+	background: -ms-linear-gradient(#444, #111);
+	background: linear-gradient(#444, #111);
+/*
+	-moz-border-radius: 50px;
+	border-radius: 50px;
+*/
+	-moz-box-shadow: 0 0.2em 0.1em #9c9c9c;
+	-webkit-box-shadow: 0 0.2em 0.1em #9c9c9c;
+	box-shadow: 0 0.2em 0.1em #9c9c9c;
+}
+
+.menu li
+{
+	float: left;
+	padding: 0;
+	position: relative;
+	line-height: 0;
+	height: 3em;
+}
+
+.menu li.group-separator {
+	border-left: 0.15em solid #444;
+	height: 3.2em;
+}
+
+.menu a, #menu a
+{
+	position:relative;
+	/* float: left; */
+	height: 1.9em;
+	padding: 0 2em;
+	color: #999;
+	text-transform: uppercase;
+	font: bold 0.7em/4.5em Arial, Helvetica;
+	text-decoration: none;
+	text-shadow: 0 0.1em 0 #000;
+	/* margin: 0.1em 0 0 0; */
+}
+.menu li:hover > a
+{
+	color: #fafafa;
+}
+
+*html .menu li a:hover /* IE6 */
+{
+	color: #fafafa;
+}
+
+.menu li:hover > ul
+{
+	display: block;
+}
+li:hover > ul > div > ul
+{
+	display: block;
+}
+
+/* Sub-menu */
+
+.menu ul
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;    
+    display: none;
+    position: absolute;
+    top: 3em;
+    left: 0.5em;
+    z-index: 99999;    
+    background: #444;
+    background: -moz-linear-gradient(#444, #111);
+    background: -webkit-gradient(linear,left bottom,left top,color-stop(0, #111),color-stop(1, #444));
+    background: -webkit-linear-gradient(#444, #111);    
+    background: -o-linear-gradient(#444, #111);	
+    background: -ms-linear-gradient(#444, #111);	
+    background: linear-gradient(#444, #111);
+    -moz-box-shadow: 0 0 2px rgba(255,255,255,.5);
+    -webkit-box-shadow: 0 0 2px rgba(255,255,255,.5);
+    box-shadow: 0 0 2px rgba(255,255,255,.5);	
+    -moz-border-radius: 0.5em;
+    border-radius: 0.5em;
+
+}
+
+.menu ul ul
+{
+  top: 0;
+}
+
+.menu ul li
+{
+    float: none;
+    margin: 0;
+    padding: 0;
+    display: block;  
+    -moz-box-shadow: 0 0.1em 0 #111111, 0 0.2em 0 #777777;
+    -webkit-box-shadow: 0 0.1em 0 #111111, 0 0.2em 0 #777777;
+    box-shadow: 0 0.1em 0 #111111, 0 0.2em 0 #777777;
+}
+
+.menu ul li:last-child
+{   
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;    
+}
+
+.menu ul a
+{    
+    padding: 1em;
+	height: 1em;
+	width: auto;
+	min-width: 4em;
+	height: auto;
+    line-height: 1em;
+    display: block;
+    white-space: nowrap;
+    float: none;
+	text-transform: none;
+}
+
+*html .menu ul a /* IE6 */
+{    
+	height: 1em;
+}
+
+*:first-child+html .menu ul a /* IE7 */
+{    
+	height: 1em;
+}
+
+.menu ul a:hover
+{
+    background: #0186ba;
+	background: -moz-linear-gradient(#04acec,  #0186ba);	
+	background: -webkit-gradient(linear, left top, left bottom, from(#04acec), to(#0186ba));
+	background: -webkit-linear-gradient(#04acec,  #0186ba);
+	background: -o-linear-gradient(#04acec,  #0186ba);
+	background: -ms-linear-gradient(#04acec,  #0186ba);
+	background: linear-gradient(#04acec,  #0186ba);
+	color: #FFF!important;
+}
+
+.menu ul li:first-child > a
+{
+    -moz-border-radius: 0.5em 0.5em 0 0;
+    border-radius: 0.5em 0.5em 0 0;
+}
+
+.menu ul:first-child li:first-child > a:after
+{
+    content: '';
+    position: absolute;
+    left: 3em;
+    top: -0.8em;
+    width: 0;
+    height: 0;
+    border-left: 0.5em solid transparent;
+    border-right: 0.5em solid transparent;
+    border-bottom: 0.8em solid #444;
+}
+
+.menu li.drop > a:after
+{
+    content: '';
+  position: absolute;
+  right: 1.2em;
+  top: 0.5em;
+  width: 0;
+  height: 0;
+  border-left: 0.35em solid transparent;
+  border-right: 0.35em solid transparent;
+  border-top: 0.7em solid #999;
+}
+
+.menu li.drop li {
+	height:1.9em;
+}
+.menu li#securityInfo li {
+	height:1.9em;
+}
+.menu li.drop li a {
+	height:2.9em!important;
+	line-height:3em!important;
+}
+.menu li.drop li a img {
+	height: 70%;
+    padding: 0.4em 0 0 0;
+}
+.menu li.drop li a img.alone {
+	display: block;
+    margin: auto;
+}
+img.meter {
+	height:33%;
+	position:relative;
+	top:0.4em;
+}
+.menu li#securityInfo li a {
+	height:2.8em!important;
+	line-height:3em!important;
+}
+
+.menu ul li:first-child a:hover:after
+{
+    border-bottom-color: #04acec; 
+}
+
+.menu ul li:last-child > a
+{
+    -moz-border-radius: 0 0 0.5em 0.5em;
+    border-radius: 0 0 0.5em 0.5em;
+}
+.menu ul li:only-child > a
+{
+    -moz-border-radius: 0.5em 0.5em 0.5em 0.5em;
+    border-radius: 0.5em 0.5em 0.5em 0.5em;
+}
+
+/* Clear floated elements */
+.menu:after 
+{
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+* html .menu             { zoom: 1; } /* IE6 */
+*:first-child+html .menu { zoom: 1; } /* IE7 */
+
+.menu li.right {float:right;}
+.menu li.right ul {left: inherit; right:0.5em;}
+.menu li.right ul li:first-child > a:after
+{
+    left: inherit;
+    right: 4.5em;
+}
+.menu-cont {position:fixed;}
+ul.col {
+  position: relative;
+  float: left;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+ul.col li:first-child > a
+{
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+ul.col li:last-child > a
+{
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+ul.col:first-child {
+  	-moz-border-radius: 0.5em 0 0 0.5em;
+    border-radius: 0.5em 0 0 0.5em;
+}
+ul.col:first-child li:first-child > a {
+  	-moz-border-radius: 0.5em 0 0 0em;
+    border-radius: 0.5em 0 0 0em;
+}
+ul.col:first-child li:last-child > a {
+  	-moz-border-radius: 0 0 0 0.5em;
+    border-radius: 0 0 0 0.5em;
+}
+ul.col:last-child {
+  	-moz-border-radius: 0 0.5em 0.5em 0;
+    border-radius: 0 0.5em 0.5em 0;
+}
+ul.col:last-child li:first-child > a {
+  	-moz-border-radius: 0 0.5em 0 0;
+    border-radius: 0 0.5em 0 0;
+}
+ul.col:last-child li:last-child > a {
+  	-moz-border-radius: 0 0 0.5em 0;
+    border-radius: 0 0 0.5em 0;
+}
+ul.col:only-child {
+  	-moz-border-radius: 0.5em;
+    border-radius: 0.5em;
+}
+ul.col:only-child li:first-child > a {
+  	-moz-border-radius: 0.5em 0.5em 0 0;
+    border-radius: 0.5em 0.5em 0 0;
+}
+ul.col:only-child li:last-child > a {
+  	-moz-border-radius: 0 0 0.5em 0.5em;
+    border-radius: 0 0 0.5em 0.5em;
+}
+li.selected a {background-color:#23a10e;color:#FFF!important;}
+div.location-container {
+	top: -1.6em;
+    position: relative;
+    padding: 0px 3em;
+    white-space: nowrap;
+    color: #999;
+	text-transform: uppercase;
+	font: bold 0.6em Arial, Helvetica;
+	text-decoration: none;
+	text-shadow: 0 0.1em 0 #000;
+    
+}
+.nav-parent {
+	position: relative;
+    top: -0.6em;
+    left: 1em;
+    white-space: nowrap;
+}
+.highlight{
+	color:#23a10e!important;
+}
+.menu li.drop > a.highlight:after
+{
+  border-top: 0.7em solid #23a10e;
+}

@@ -1,0 +1,79 @@
+@import '~assets/sass/_mixin.scss';
+
+$headerHeight:15%;
+$contentHeight:85%;
+$footerHeight:0%;
+
+@function contentHeight() {
+    @return (100-$headerHeight)-$footerHeight;
+}
+
+.main-R{
+    position: absolute!important;
+    height: 100%!important;
+    max-width:100%;
+    overflow-y: auto!important;
+    top:0!important;
+    left:0!important;
+}
+
+
+.main-wrapper{
+    background-color: #d9d9d9;
+    height: 100vh;
+    width: 100%;   
+}
+
+.box{ border: 0.05em solid darkgray}
+
+.content-wrapper{
+    position: absolute;
+    top: $headerHeight;
+    width: 100%;
+    height: contentHeight()!important;
+}
+
+.content-wrapper-R{
+    height: 100vw;
+    position: initial;
+}
+.container{
+    height: 100%;
+}
+
+.sixty{
+    height: 60%;
+    width: 100%;
+    margin:auto;
+}
+
+.fiftyfive{
+    height: 55%;
+    width: 100%;
+    margin:auto;
+}
+.fourtyfive{
+    height: 45%;
+    width: 100%;
+    margin:auto;
+}
+.fourty{
+    height: 40%;
+    width: 100%;
+    margin:auto;
+}
+.twentyfive{
+    height: 25%;
+    width: 100%;
+    margin:auto;
+}
+canvas{
+    padding: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+.container-nopadding{
+    height: 100%;
+    padding: 0;
+}

@@ -1,0 +1,291 @@
+/* body {margin:0;padding:0;background-color:#ccc;font-family:verdana, arial, helvetica, sans-serif;} */
+#main-wrapper {background-color:#fff;}
+
+#header-wrapper {text-align:center;color:#fff;}
+h1 {margin:0;padding:0.1em 0;font-weight:normal;font-size:1.5em;}
+/*
+h1 #site:before { content: '';
+	position:relative;
+	left:1em;
+	padding: 0 1em;
+  border-left: 0.1em solid #666;}
+h1 #measure:before { content: '';
+	position:relative;
+	left:1em;
+	padding: 0 1em;
+  border-left: 0.1em solid #666;}
+*/
+h1 .menuItem:before { content: '';
+	position:relative;
+	left:1em;
+	padding: 0 1em;
+  border-left: 0.1em solid #666;}
+  
+.icons {padding: 0.2em;opacity:0.4;}
+.icons img {width:100%;}
+#display {cursor:pointer;}
+#details {cursor:default;}
+body.display #details {cursor:pointer;}
+body.display #display {cursor:default;}
+
+#status, #message {font-size:0.8em;color: #999; }
+#status img {width:1.5em; }
+#status .label {position: relative;	top: -0.6em;}
+#status .subText {position: relative;top: -0.4em;font-size:0.7em;}
+#containerUnit {float: right;}
+#containerConverter {float: right;padding-right: 1em;}
+
+#message {text-align: center; padding:1em;}
+
+#logo-wrapper img {width:100%;}
+.speedometer {width:100px; height:100px;}
+.odometer {width: 100px; height: 25px;}
+
+#stat-wrapper {background-color:#fff;}
+
+.chart-header {font-size:1em;height: 2em;background:linear-gradient(to bottom, rgba(242,246,248,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 51%, rgba(224,239,249,1) 100%); border-bottom:0.05em solid #bbb;}
+.chart-header .calendar_img {height: 100%;cursor: pointer;padding: 0 0.1em;display:none;}
+.chart-current {margin: 0;padding-top: 0.4em;color: #666;font-size: 1em;cursor: pointer; position: absolute; width: 10%;left: 45%;}
+
+#info-wrapper {padding: 0em;}
+.data-wrapper {padding:0.8em 1em;}
+#dataHeader {text-align:center; padding-top:0.4em; color:#666; font-size:1em!important;height: 1.8em!important;background:linear-gradient(to bottom, rgba(242,246,248,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 51%, rgba(224,239,249,1) 100%); border-bottom:0.05em solid #bbb;}
+.label {width:12em;position:absolute;}
+.label.indent {padding:0 0 0 2em;width:8em;position:absolute;}
+.data {text-align:right;width:7.5em;position:absolute;left:10.5em;}
+.unit {width:4em;position:absolute;left:18.5em;}
+body.display #info-wrapper {padding: 0;}
+body.display .data-wrapper {font-size:0.8em!important;padding:0.7em 0;}
+body.display #dataHeader {font-size:0.8em!important;font-weight:bold;}
+body.display .label {width:12em;position:absolute;padding:0 0 0 1em;}
+body.display .label.indent {padding:0 0 0 2em;width:10em;position:absolute;}
+body.display .data {text-align:right;width:9em;position:absolute;left:9.5em;}
+body.display .unit {width:4em;position:absolute;left:19em;}
+.de .data-wrapper {font-size:0.9em!important;padding:1em 1em;}
+.de .label {width:15em;position:absolute;}
+.de .label.indent {padding:0 0 0 1em;width:15em;position:absolute;}
+.de .data {text-align:right;width:8em;position:absolute;left:14.5em;}
+.de .unit {width:4em;position:absolute;left:23em;}
+body.display .de .data-wrapper {font-size:0.7em!important;padding:0.7em 0;}
+body.display .de .label {width:16em;position:absolute;padding:0 0 0 1em;}
+body.display .de .label.indent {padding:0 0 0 1em;width:16em;position:absolute;}
+body.display .de .data {text-align:right;width:9em;position:absolute;left:13.5em;}
+body.display .de .unit {width:4em;position:absolute;left:23em;}
+
+#twitter-wrapper {overflow:hidden;}
+
+#twitter-wrapper a {text-decoration:none; color:inherit;}
+.tweet-wrapper-inner {background-color:#fff;margin:0.5em; padding:0.2em;border:1px solid #aaa;cursor:pointer;}
+.tweet {font-size: 0.8em!important; color:#666; display:table;min-height: 3em;}
+.img_tweet_wrapper {display:table;padding:0;}
+.img_tweet {text-align:right; }
+.img_tweet img {width:30%;}
+.user-tweet-wrapper {float:left;display:table;width:15%;}
+.tweet-text {display:table; padding: 0 0.2em}
+.tweet-text a {color:#999;}
+.img_user_tweet {text-align:center; color:#aaa;overflow:hidden;}
+.img_user_tweet img {width:100%;}
+.user_tweet {font-weight:bold; color:#666;font-size:0.8em;display:table;}
+.date_user_tweet {font-weight:normal; color:#999;font-size:0.6em;display:table;padding:0.5em 0 0 0;}
+
+.rounded-img {
+	-moz-border-radius: 0.5em;
+	-webkit-border-radius: 0.5em;
+	border-radius: 0.5em; /* future proofing */
+	-khtml-border-radius: 0.5em; /* for old Konqueror browsers */
+}
+.circle {
+    border-radius: 50%;
+    padding:0.1em!important;
+    border: 0.15em solid #999;
+   
+}
+
+#supp-logo-wrapper {padding:0.5em;text-align:center;}
+#supp-logo-wrapper img {max-height:100%;max-width:100%;display:inline;}
+
+#exportContainer {
+	position: relative;
+	float: right;
+	right:5em;
+	top: -0.1em;
+}
+#exportContainer #innerContainer {
+	position: absolute;
+	display: none;
+	z-index: 9999;
+	width: 11em;
+	background-color: #999999;
+	border: 0.1em solid #CCCCCC;
+	color: #EEEEEE;
+	text-transform: uppercase;
+	font: normal 0.8em/2em Arial, Helvetica;
+	text-decoration: none;
+	/*text-shadow: 0 0.2em 0 #666;
+	box-shadow: 0.5em 0.5em 1em #888888;*/
+}
+
+#exportContainer #innerContainer .header {
+	text-align: center;
+	font-size: 1em;
+	line-height: 3em;
+}
+#exportContainer #innerContainer .item {
+	border-top: 0.1em solid #CCCCCC;
+	padding: 0.3em 0.8em;
+	background-color: #999999;
+	cursor: pointer;
+}
+#exportContainer #innerContainer .item.disabled, #exportContainer #innerContainer .item.disabled:hover {
+	background-color: #AAAAAA;
+	color: #666666;
+	text-shadow: 0 0.1em 0 #CCC;
+	cursor: default;
+}
+#exportContainer #innerContainer .item:hover {
+	background-color: #CCCCCC;
+}
+
+.weather-1-day .weather_day {background:transparent!important;color:#30353c!important;}
+.weather-1-day .weather-date {display:none;}
+.weather-1-day .weather-img {border:none!important;padding:0!important;}
+.weather-1-day .weather-img img {
+	width:30%!important;
+	left: 36%;
+    position: absolute;
+}
+.weather-1-day .weather td {text-align:left!important;}
+.weather-1-day .weather-temp.max {position:absolute; right:3%;top:5%; font-size: 1em!important;}
+.weather-1-day .weather-temp.min {position:absolute; right:3%;top:34%;font-size: 0.8em!important;}
+.weather-1-day .weather_day .weather-wind {position:absolute; right:3%;top:53%;font-size: 0.6em!important;}
+.weather-1-day .weather_day .weather-rain {position:absolute; right:3%;top:68%;font-size: 0.6em!important;}
+.weather-1-day .weather-credit {position:absolute; right:1%;bottom:1%; font-size: 0.3em!important; color:#666!important}
+.weather-1-day .weather-credit a {color:#666!important}
+
+
+.noConnectionBox {
+	display: none;
+	z-index: 9999;
+	-moz-border-radius: 1em;
+	border-radius: 1em;
+	width:22em;
+    height:2em;
+    background:#444;
+    position:absolute;
+    color: white;
+	font-size: 1em;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 1em;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+}
+
+.v-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.rounded {
+	-moz-border-radius: 0.2em;
+	-webkit-border-radius: 0.2em;
+	border-radius: 0.2em; /* future proofing */
+	-khtml-border-radius: 0.2em; /* for old Konqueror browsers */
+}
+.rounded-top {
+	-moz-border-radius: 0.2em 0.2em 0 0;
+	-webkit-border-radius:  0.2em 0.2em 0 0;
+	border-radius:  0.2em 0.2em 0 0; /* future proofing */
+	-khtml-border-radius:  0.2em 0.2em 0 0; /* for old Konqueror browsers */
+}
+.rounded-bottom {
+	-moz-border-radius:0 0 0.2em 0.2em ;
+	-webkit-border-radius:0 0 0.2em 0.2em;
+	border-radius:0 0 0.2em 0.2em; /* future proofing */
+	-khtml-border-radius:0 0 0.2em 0.2em; /* for old Konqueror browsers */
+}
+.shadow {
+	box-shadow: 0px 0px 0.5em 0px rgba(119,119,119,0.65);
+	-moz-box-shadow: 0px 0px 0.5em 0px rgba(119,119,119,0.65);
+	-webkit-box-shadow: 0px 0px 0.5em 0px rgba(119,119,119,0.65);
+}
+.rotate {
+	-moz-transform: rotate(-90deg); 
+	-webkit-transform: rotate(-90deg); 
+	transform: rotate(-90deg); 
+}
+
+/**
+ * Slanted tabs with CSS 3D transforms
+ * See http://lea.verou.me/2013/10/slanted-tabs-with-css-3d-transforms/
+ */
+
+#stat-tabs {
+	position: relative;
+	z-index: 1;
+	white-space: nowrap;
+	
+	/* margin-top:-1.27em; */
+}
+
+#stat-tabs div {
+	cursor:pointer;
+	position: relative;
+	text-align:center;
+	width:7em;
+	display: inline-block;
+	padding: 0.75em 0.5em 0.75em;
+	color: inherit;
+	text-decoration: none;
+	margin: 0 -0.7em;
+	color:#666;
+	font-size:0.5em;
+} 
+
+#stat-tabs div::before,
+
+#stat-tabs div::before {
+	content: ''; /* To generate the box */
+	position: absolute;
+	top: 0; right: 0; bottom: .5em; left: 0;
+	z-index: -1;
+	border-bottom: none;
+	border-radius: 0.4em 0.4em 0 0;
+	background: rgba(181,198,208,1);
+	box-shadow: 0 0.2em hsla(0,0%,100%,.5) inset;
+	transform: perspective(0.3em) rotateX(1.5deg);
+	transform-origin: bottom;
+	border: .1em solid #aaa;
+}
+
+
+#stat-tabs.left div {
+	padding: 1em 2em 0.7em 1em;
+}
+
+#stat-tabs.left div::before {
+	transform-origin: bottom left;
+}
+
+#stat-tabs.right div {
+	padding: 1em 1em 0.7em 2em;
+}
+
+#stat-tabs.right div::before {
+	transform-origin: bottom right;
+}
+
+#stat-tabs div.selected {
+	z-index: 2;
+	top:-0.2em;
+	font-weight: bold;
+}
+
+#stat-tabs div.selected::before {
+	margin: -0.3em 0;
+	border-top-width: 0.1em;
+	background-color: rgba(242,246,248,1);
+	border-bottom:none;
+}
+

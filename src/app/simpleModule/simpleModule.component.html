@@ -1,0 +1,28 @@
+<div class="main-wrapper" [ngClass]="{'main-R':aNeedForRescale}">
+    <div [ngClass]="{'content-wrapper-R': aNeedForRescale, 'content-wrapper': !aNeedForRescale}">
+        <div class="container col-sm-4 box">
+            <div class="sixty">
+                <app-speedometer speedometerId="1" [nodeId]="2580" [ownerNodeId]="2078" [measureFilter]="'{power.ac|P}'"></app-speedometer>
+            </div>
+            <div class="fourty" [ngClass]="{'padding-12': aNeedForRescale}">
+                <app-odometer odoId="1" [nodeId]="2580" [ownerNodeId]="2078" [measureFilter]="'{energy.total.ac|P}'"></app-odometer>
+            </div>
+        </div>
+        <div class="container col-sm-4 box">
+            <div class="sixty">
+                <app-speedometer speedometerId="2" [nodeId]="2567" [ownerNodeId]="2078" [measureFilter]="'{power.ac|U}'"></app-speedometer>
+            </div>
+            <div class="fourty" [ngClass]="{'padding-12': aNeedForRescale}">
+                <app-odometer odoId="2" [nodeId]="2567" [ownerNodeId]="2078" [measureFilter]="'{energy.total.ac|P}'"></app-odometer>
+            </div>
+        </div>
+        <div class="container col-sm-4 box">
+            <div class="sixty">
+                <app-speedometer speedometerId="3" [nodeId]="3533" [ownerNodeId]="2078" [measureFilter]="'{power.ac|U}'"></app-speedometer>
+            </div>
+            <div class="fourty" [ngClass]="{'padding-12': aNeedForRescale}">
+                <app-odometer odoId="3" [nodeId]="3533" [ownerNodeId]="2078" [measureFilter]="'{energy.total.ac|P}'"></app-odometer>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,99 @@
+@mixin linear-gradient($direction, $color-stops...) {
+
+    @if is-direction($direction) == false {
+      $color-stops: $direction, $color-stops;
+      $direction: 180deg;
+    }
+  
+    background: nth(nth($color-stops, 1), 1);
+    background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+    background: linear-gradient($direction, $color-stops);
+  }
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+@if $inset {
+    -webkit-box-shadow:inset $left $top $blur $color;
+    -moz-box-shadow:inset $left $top $blur $color;
+    box-shadow:inset $left $top $blur $color;
+} @else {
+    -webkit-box-shadow: $left $top $blur $color;
+    -moz-box-shadow: $left $top $blur $color;
+    box-shadow: $left $top $blur $color;
+    }
+}
+
+@mixin box-shadow($t,$r,$b,$l,$c) {
+    box-shadow: $t,$r,$b,$l,$c;
+    -moz-box-shadow: $t,$r,$b,$l,$c;
+    -webkit-box-shadow: $t,$r,$b,$l,$c;
+    -khtml-box-shadow:$t,$r,$b,$l,$c;
+}
+
+@mixin border-radius($em) {
+    -moz-border-radius: $em;
+    -webkit-border-radius:  $em;
+    border-radius: $em;
+    -khtml-border-radius:  $em;
+}
+
+@mixin aspectRatio($width, $height){
+
+    $displayRatio: $width/$height;    
+    $a:$width;
+    $a2:$height*$displayRatio;
+    $widthforheight:0;
+
+    @if($a < $a2){
+        width: $a;
+        $widthforheight:$a;
+    } @else {
+        width: $a2;
+        $widthforheight:$a2;
+    }
+    height: $widthforheight/$displayRatio;
+}
+
+@mixin aspectRatio1($width, $height) {
+    
+    position: relative;
+    &:before{
+        display: block;
+        content: " ";
+        width: 100%;
+        padding-top: ($height / $width) * 100%;
+    }
+
+    > .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+@mixin maintain-ratio($ratio: 1 1) {
+    @if length($ratio) < 2 or length($ratio) > 2 {
+      @warn "$ratio must be a list with two values.";
+    }
+  
+    $width: 100%;
+    $height: percentage(nth($ratio, 2) / nth($ratio, 1));
+    
+    width: $width;
+    height: 0;
+    padding-bottom: $height;
+  }
+@mixin aspect-ratio($arglist...){
+    $map : keywords($arglist);
+    $height: map-get($map, height) or nth-value($arglist, 2);
+    $width:  map-get($map, width)  or nth-value($arglist, 1);
+    $ratio:  map-get($map, ratio)  or if($width and $height, $width/$height, nth-value($arglist, 1)) or 1;
+    $padding: 1/$ratio * 100%;
+    &::before, &::after { content: ''; display: table; clear: both; width:1px; margin-left:-1px; }
+    &::before { float: left; padding-bottom: $padding; }    
+}
+   
+@function nth-value($list, $index) {
+  @return if(length($list) >= $index, nth($list, $index), null);
+} 
